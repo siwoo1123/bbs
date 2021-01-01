@@ -15,7 +15,6 @@ class MainController < ApplicationController
 	end
 	def edit
 		@post = Post.find(params[:id])
-		@pw = @post.password
 	end
 	def update
 		@post = Post.find(params[:id])

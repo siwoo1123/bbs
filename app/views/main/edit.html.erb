@@ -9,6 +9,9 @@
         <li class="nav-item">
           <a id="dark" onclick="dk()">다크모드</a>
         </li>
+		 <li class="nav-item">
+          <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" target="_blank" class="nav-link"> 제작도움 : 조코딩<img src="https://animalface.site/img/youtube-copy.jpg" alt="유튭" width="30px" height="27.250"></a>
+        </li>
       </ul>
     </div>
   </div>
@@ -29,19 +32,6 @@
 	var dark = 0;
 	var dkbutton = document.getElementById('dark');
 	var body = document.querySelector('body');
-	if (dark == 0) {
-		body.style.backgroundColor = "black";
-		body.style.color = "white";
-		dark = 1;
-		dkbutton.innerHTML = "라이트모드";
-		document.querySelector('li').style.color = "black";
-	} else {
-		body.style.backgroundColor = "white";
-		body.style.color = "black";
-		dark = 0;
-		dkbutton.innerHTML = "다크모드";
-		document.querySelector('li').style.color = "black";
-	}
 	function dk() {
 		if (dark == 0) {
 			body.style.backgroundColor = "black";

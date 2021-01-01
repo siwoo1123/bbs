@@ -2867,3 +2867,403 @@ Processing by MainController#index as HTML
 Completed 200 OK in 51ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 6302)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/bbs/config/environment.rb:5)
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:05:54 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 150.4ms | Allocations: 5110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 531ms (Views: 495.4ms | ActiveRecord: 5.9ms | Allocations: 28887)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:05:58 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 4896)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:06:12 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"4dAVad8OSahTUhdEYCSPhyDFTYuz60OvXkqtofs0iXgDeZE7xdL4tgz+6GlriFw4JbMnH65aFDjAdGWbft4Nsg==", "id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 3232)
+
+
+  
+NoMethodError (undefined method `password' for #<Post:0x000055812fd4bd58>):
+  
+app/controllers/main_controller.rb:18:in `edit'
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:06:27 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"4dAVad8OSahTUhdEYCSPhyDFTYuz60OvXkqtofs0iXgDeZE7xdL4tgz+6GlriFw4JbMnH65aFDjAdGWbft4Nsg==", "id"=>"16"}
+  [1m[36mPost Load (70.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 259)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 17.8ms | ActiveRecord: 71.0ms | Allocations: 9296)
+
+
+Started GET "/edit" for 172.17.0.1 at 2021-01-01 14:06:44 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/edit" for 172.17.0.1 at 2021-01-01 14:06:46 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:06:49 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (85.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 88.1ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 9.2ms | ActiveRecord: 85.3ms | Allocations: 6332)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:06:51 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"ZjnC3L2Y17BnaoOzvEQIiKFrt7901XozRUbD0mS1ZseEkEaOp0RmrjjGfJ636Ns3pB3dK2lkLaTbeAvo4V/iDQ==", "id"=>"16"}
+  [1m[36mPost Load (96.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 6.5ms | ActiveRecord: 96.0ms | Allocations: 4944)
+
+
+Started GET "/edit" for 172.17.0.1 at 2021-01-01 14:06:54 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/edit" for 172.17.0.1 at 2021-01-01 14:07:09 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:07:14 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms | Allocations: 6306)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:07:15 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"iFt1gqcihMH+D40lCfTZyAPy67AloqzPfbiNguVd8XJq8vHQvf4136GjcggCWAp3BoSBJDgT+1jjhkW4YLd1uA==", "id"=>"16"}
+  [1m[36mPost Load (18.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 8.2ms | ActiveRecord: 18.8ms | Allocations: 4939)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:07:16 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 4873)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:07:18 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"iwoQcA1QC9w1OiQFuKyxRzyqxitk1i/2e8MmNy6tdPRpo5QiF4y6wmqW2yizAGL4Odysv3lneGHl/e4Nq0fwPg==", "id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 0.3ms | Allocations: 31)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.2ms | Allocations: 4602)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:07:23 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"1X76o27A9ztv4jyF3g7bOsJo3pWoJwmnFKD1RTt3YOo3137xdBxGJTBOw6jVogiFxx60AbWWXjCKnj1/vp3kIA==", "id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 31)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 4621)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:07:32 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (5.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 5.2ms | Allocations: 4876)
+
+
+Started GET "/rails/db" for 172.17.0.1 at 2021-01-01 14:07:39 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (Duration: 2.9ms | Allocations: 828)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 4.6ms | Allocations: 2017)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 2.2ms | Allocations: 440)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 1.7ms | Allocations: 453)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 4.8ms | Allocations: 1716)
+Completed 200 OK in 117ms (Views: 112.7ms | ActiveRecord: 0.2ms | Allocations: 19512)
+
+
+Started GET "/rails/db/tables/posts/data" for 172.17.0.1 at 2021-01-01 14:07:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"posts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 1.4ms | Allocations: 141)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 82.1ms | Allocations: 14271)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.6ms | Allocations: 5558)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 73.5ms | Allocations: 1113)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 1.6ms | Allocations: 110)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 196.8ms | Allocations: 35832)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 200.0ms | Allocations: 37309)
+Completed 200 OK in 358ms (Views: 200.6ms | ActiveRecord: 52.4ms | Allocations: 42352)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:07:52 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"1X76o27A9ztv4jyF3g7bOsJo3pWoJwmnFKD1RTt3YOo3137xdBxGJTBOw6jVogiFxx60AbWWXjCKnj1/vp3kIA==", "id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 49.9ms | Allocations: 32)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.1ms | Allocations: 4602)
+
+
+Started POST "/delete" for 172.17.0.1 at 2021-01-01 14:07:54 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#delete as HTML
+  Parameters: {"authenticity_token"=>"1X76o27A9ztv4jyF3g7bOsJo3pWoJwmnFKD1RTt3YOo3137xdBxGJTBOw6jVogiFxx60AbWWXjCKnj1/vp3kIA==", "id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:35:in `delete'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/main_controller.rb:36:in `delete'
+  [1m[36mPost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/main_controller.rb:36:in `delete'
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/main_controller.rb:36:in `delete'
+Redirected to http://bbs-lnzab.run.goorm.io/
+Completed 302 Found in 106ms (ActiveRecord: 15.9ms | Allocations: 4109)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:07:54 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 627)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4628)
+
+
+Started POST "/create" for 172.17.0.1 at 2021-01-01 14:07:59 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#create as HTML
+  Parameters: {"authenticity_token"=>"12hxUlPufYPITNbfvWE3qqHf3/0cBbRviJb1cmDUOnw1wfUASTLMnZfgKfK2zeQVpKm1aQG04/gWqD1I5T6+tg==", "title"=>"jkhh", "content"=>"b\r\nh"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/main_controller.rb:13:in `create'
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jkhh"], ["content", "b\r<br>h"], ["created_at", "2021-01-01 14:07:59.108588"], ["updated_at", "2021-01-01 14:07:59.108588"]]
+  ↳ app/controllers/main_controller.rb:13:in `create'
+  [1m[35m (21.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/main_controller.rb:13:in `create'
+Redirected to http://bbs-lnzab.run.goorm.io/
+Completed 302 Found in 96ms (ActiveRecord: 21.6ms | Allocations: 4077)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 14:07:59 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 4868)
+
+
+Started POST "/edit" for 172.17.0.1 at 2021-01-01 14:08:00 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#edit as HTML
+  Parameters: {"authenticity_token"=>"IpARsHIE4nt4+wSYlwrU5bVI6/CuBi9VsKp7g7hZFGvAOZXiaNhTZSdX+7WcpgdasD6BZLO3eMIulLO5PbOQoQ==", "id"=>"18"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:17:in `edit'
+  Rendering main/edit.html.erb within layouts/application
+  Rendered main/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 31)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 4605)
+
+
