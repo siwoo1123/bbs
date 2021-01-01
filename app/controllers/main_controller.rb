@@ -5,7 +5,11 @@ class MainController < ApplicationController
 	def create
 		title1 = params[:title]
 		content1 = params[:content]
-		content1 ["\n"] = "<br>"
+		begin
+			content1 ["\n"] = "<br>"
+		rescue
+			
+		end
 		Post.create(title: title1, content: content1)
 		redirect_to '/'
 	end
@@ -17,7 +21,11 @@ class MainController < ApplicationController
 		@post = Post.find(params[:id])
 		title = params[:title]
 		content = params[:content]
-		content ["\n"] = "<br>"
+		begin
+			content ["\n"] = "<br>"
+		rescue
+			
+		end
 		
 		@post.title = params[:title]
 		@post.content = params[:content]

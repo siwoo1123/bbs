@@ -2699,3 +2699,171 @@ Processing by MainController#index as HTML
 Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms | Allocations: 4914)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/bbs/config/environment.rb:5)
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:52:32 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 136.3ms | Allocations: 5110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 573ms (Views: 558.2ms | ActiveRecord: 2.6ms | Allocations: 28892)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:53:28 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 6324)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:54:07 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1164)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.1ms | Allocations: 6289)
+
+
+Started POST "/create" for 172.17.0.1 at 2021-01-01 13:54:25 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#create as HTML
+  Parameters: {"authenticity_token"=>"ovCsHV6inRrDtCGtCV3asBbfnDV3w6baa2PKsIFAsUhAWShPRH4sBJwY3oAC8QkPE6n2oWpy8U31XQKKBKo1gg==", "title"=>"", "content"=>""}
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms | Allocations: 812)
+
+
+  
+IndexError (string not matched):
+  
+app/controllers/main_controller.rb:8:in `[]='
+app/controllers/main_controller.rb:8:in `create'
+Started POST "/create" for 172.17.0.1 at 2021-01-01 13:54:33 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#create as HTML
+  Parameters: {"authenticity_token"=>"ovCsHV6inRrDtCGtCV3asBbfnDV3w6baa2PKsIFAsUhAWShPRH4sBJwY3oAC8QkPE6n2oWpy8U31XQKKBKo1gg==", "title"=>"b", "content"=>"g"}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 808)
+
+
+  
+IndexError (string not matched):
+  
+app/controllers/main_controller.rb:8:in `[]='
+app/controllers/main_controller.rb:8:in `create'
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:57:02 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/workspace/bbs/app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+			content ["\n"] = "<br>"
+			               ^):
+  
+app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:57:07 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/workspace/bbs/app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+			content ["\n"] = "<br>"
+			               ^):
+  
+app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+app/controllers/main_controller.rb:9: syntax error, unexpected '=', expecting end
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:57:27 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 27.6ms | Allocations: 4546)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 1.2ms | Allocations: 9167)
+
+
+Started POST "/create" for 172.17.0.1 at 2021-01-01 13:57:33 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#create as HTML
+  Parameters: {"authenticity_token"=>"ZjMPzl7LUTCgXqYK9HrPKGpz9CcPhYKjbUAsNQ8y2kOEmoucRBfgLv/yWSf/1hyXbwWesxI01TTzfuQPitheiQ==", "title"=>"rsd", "content"=>"yyi"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/main_controller.rb:13:in `create'
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "rsd"], ["content", "yyi"], ["created_at", "2021-01-01 13:57:33.973349"], ["updated_at", "2021-01-01 13:57:33.973349"]]
+  ↳ app/controllers/main_controller.rb:13:in `create'
+  [1m[35m (45.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/main_controller.rb:13:in `create'
+Redirected to http://bbs-lnzab.run.goorm.io/
+Completed 302 Found in 116ms (ActiveRecord: 46.0ms | Allocations: 4427)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:57:34 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms | Allocations: 5040)
+
+
+Started POST "/delete" for 172.17.0.1 at 2021-01-01 13:57:35 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#delete as HTML
+  Parameters: {"authenticity_token"=>"AQZ1SwDWdBKA0Rn0zoEBBRKEUtNqudtHXe97PvoKUlLjr/EZGgrFDN995tnFLdK6F/I4R3cIjNDD0bMEf+DWmA==", "id"=>"17"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:36:in `delete'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/main_controller.rb:37:in `delete'
+  [1m[36mPost Destroy (5.9ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/main_controller.rb:37:in `delete'
+  [1m[35m (21.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/main_controller.rb:37:in `delete'
+Redirected to http://bbs-lnzab.run.goorm.io/
+Completed 302 Found in 63ms (ActiveRecord: 28.6ms | Allocations: 6125)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:57:35 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.2ms | Allocations: 4871)
+
+
+Started GET "/" for 172.17.0.1 at 2021-01-01 13:58:48 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/main/index.html.erb:31
+  Rendered main/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 6302)
+
+

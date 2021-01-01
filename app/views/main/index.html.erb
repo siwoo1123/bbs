@@ -9,6 +9,9 @@
         <li class="nav-item">
           <a id="dark" onclick="dk()">다크모드</a>
         </li>
+		 <li class="nav-item">
+          <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" target="_blank" class="nav-link"><img src="https://animalface.site/img/youtube-copy.jpg" alt="유튭" width="30px" height="27.250"> 제작도움 : 조코딩</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -18,8 +21,8 @@
 	<h1>글쓰기</h1>
 	<form action="/create" method="post">
 	  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-	  <input type="text" id="fname" name="title" placeholder="제목" class="text"><br>
-	  <textarea type="text" id="lname" name="content" placeholder="내용" rows="4"></textarea><br>
+	  <input type="text" id="fname" name="title" placeholder="제목" class="text" required><br>
+	  <textarea type="text" id="lname" name="content" placeholder="내용" rows="4" required></textarea><br>
 	  <input type="submit" value="글쓰기">
 	</form> 
 </div>
